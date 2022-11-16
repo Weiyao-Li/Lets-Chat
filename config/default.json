@@ -1,5 +1,5 @@
 {
-  "mongoURI": "mongodb+srv://weiyaoli123:abc@devconnector.jr66luc.mongodb.net/test",
+  "mongoURI": "mongodb+srv://@devconnector.jr66luc.mongodb.net/test",
   "jwtSecret": "mysecrettoken",
   "githubClientId": "aaf7a6b3ae6a6c65dc3a",
   "githubSecret": "67104c06f65541d5904c7428c7bb576aa99cfe63",
