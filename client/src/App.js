@@ -8,11 +8,18 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => (
   <Router>
-    <Navbar />
-    <Routes>
-      <Route exact path="/" component={Landing} />
-    </Routes>
-    <Landing />
+    <Fragment>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+      </Routes>
+      <section className="container">
+        <Routes>
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </section>
+    </Fragment>
   </Router>
 );
 
