@@ -8,12 +8,13 @@ const connectDB = async () => {
       useNewUrlParser: true,
       // useCreateIndex: true,
       // useFindAndModify: false,
+      useUnifiedTopology: true,
     });
 
     console.log("MongoDB Connected...");
   } catch (err) {
     console.error(err.message);
-    //exit process with failure
+    // Exit process with failure
     process.exit(1);
   }
 };
