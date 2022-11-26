@@ -10,11 +10,9 @@ const App = () => (
   <Router>
     <Fragment>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Landing />} />
-      </Routes>
       <section className="container">
         <Routes>
+          <Route path="/" element={<Landing />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>
