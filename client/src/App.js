@@ -6,6 +6,8 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Alert from "./components/layout/Alert";
+import Dashboard from "./components/dashboard/Dashboard";
+import PrivateRoute from "./components/routing/PrivateRoute";
 //Redux
 import { Provider } from "react-redux";
 import store from "./store";
@@ -37,8 +39,12 @@ const App = () => {
         <Alert />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+          <Route
+            path="dashboard"
+            element={<PrivateRoute component={Dashboard} />}
+          />
         </Routes>
       </Router>
     </Provider>
